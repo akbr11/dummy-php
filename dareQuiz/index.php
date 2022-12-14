@@ -185,7 +185,7 @@
       border: black solid 1px;
     }
 
-    .color {
+    .btnCursor {
       cursor: pointer;
     }
   </style>
@@ -196,7 +196,7 @@
     <div class="container">
       <div class="row vh-100 mx-auto">
         <div class="row justify-content-center">
-          <div class="col-sm-12 col-md-6 col-lg-6 my-auto">
+          <div class="col-sm-12 col-md-8 col-lg-6 my-auto">
             <div class="card custom-box">
               <div class="card-body">
                 <h1 class="logo-name"><b>Dare Quiz</b></h1>
@@ -240,30 +240,30 @@
                 </div>
                 <div class="mt-2">
                   <button type="button" class="btn btn-warning rounded" onclick="add()">Add Option</button>
-                  <div class="d-flex justify-content-center mt-3 countdown">
-                    <div class="mx-1">
-                      <div class="color" style="background-color: rgb(200, 45, 68); height: 34px; width: 34px; border-radius: 100px;"></div>
+                  <div class="row mt-3 justify-content-center">
+                    <div class="col-auto mb-2">
+                      <div class="color1" style="background-color: rgb(200, 45, 68); height: 34px; width: 34px; border-radius: 100px;" onclick="color1()"></div>
                     </div>
-                    <div class="mx-1">
-                      <div class="color" style="background-color: rgb(239, 70, 70); height: 34px; width: 34px; border-radius: 100px;"></div>
+                    <div class="col-auto mb-2">
+                      <div class="color2" style="background-color: rgb(239, 70, 70); height: 34px; width: 34px; border-radius: 100px;" onclick="color2()"></div>
                     </div>
-                    <div class="mx-1">
-                      <div class="color" style="background-color: rgb(255, 161, 0); height: 34px; width: 34px; border-radius: 100px;"></div>
+                    <div class="col-auto mb-2">
+                      <div class="color3" style="background-color: rgb(255, 161, 0); height: 34px; width: 34px; border-radius: 100px;" onclick="color3()"></div>
                     </div>
-                    <div class="mx-1">
-                      <div class="color" style="background-color: rgb(9, 177, 74); height: 34px; width: 34px; border-radius: 100px;"></div>
+                    <div class="col-auto mb-2">
+                      <div class="color4" style="background-color: rgb(9, 177, 74); height: 34px; width: 34px; border-radius: 100px;" onclick="color4()"></div>
                     </div>
-                    <div class="mx-1">
-                      <div class="color" style="background-color: rgb(32, 183, 255); height: 34px; width: 34px; border-radius: 100px;"></div>
+                    <div class="col-auto mb-2">
+                      <div class="color5" style="background-color: rgb(32, 183, 255); height: 34px; width: 34px; border-radius: 100px;" onclick="color5()"></div>
                     </div>
-                    <div class="mx-1">
-                      <div class="color" style="background-color: rgb(86, 126, 255); height: 34px; width: 34px; border-radius: 100px;"></div>
+                    <div class="col-auto mb-2">
+                      <div class="color6" style="background-color: rgb(86, 126, 255); height: 34px; width: 34px; border-radius: 100px;" onclick="color6()"></div>
                     </div>
-                    <div class="mx-1">
-                      <div class="color" style="background-color: rgb(197, 108, 240); height: 34px; width: 34px; border-radius: 100px;"></div>
+                    <div class="col-auto mb-2">
+                      <div class="color7" style="background-color: rgb(197, 108, 240); height: 34px; width: 34px; border-radius: 100px;" onclick="color7()"></div>
                     </div>
-                    <div class="mx-1">
-                      <div class="color" style="background-color: rgb(87, 96, 111); height: 34px; width: 34px; border-radius: 100px;"></div>
+                    <div class="col-auto">
+                      <div class="color8" style="background-color: rgb(87, 96, 111); height: 34px; width: 34px; border-radius: 100px;" onclick="color8()"></div>
                     </div>
                   </div>
                 </div>
@@ -277,6 +277,7 @@
 
 
   <script>
+    // add text box
     const result = document.querySelector('.obj');
     const textBox = "";
 
@@ -291,18 +292,58 @@
 
       result.appendChild(div);
     }
+    // end text box
 
+    // add remove text box
     function remove(ele) {
       console.log();
       ele.parentNode.remove();
     }
+    // end remove text box
 
-    const btnColor = document.querySelector('.color');
-    const borderColor = document.querySelector('.custom-box');
+    // change border color
+    const border = document.querySelector('.custom-box');
 
-    btnColor.addEventListener('click', function() {
-      borderColor.style.border = 'black';
-    });
+    function color1() {
+      const btnColor1 = document.querySelector('.color1');
+      border.style.borderColor = '#C82D44';
+    }
+
+    function color2() {
+      const btnColor2 = document.querySelector('.color2');
+      border.style.borderColor = '#EF4646';
+    }
+
+    function color3() {
+      const btnColor3 = document.querySelector('.color3');
+      border.style.borderColor = '#FFA100';
+    }
+
+    function color4() {
+      const btnColor4 = document.querySelector('.color4');
+      border.style.borderColor = '#09B14A';
+    }
+
+    function color5() {
+      const btnColor5 = document.querySelector('.color5');
+      border.style.borderColor = '#20B7FF';
+    }
+
+    function color6() {
+      const btnColor6 = document.querySelector('.color6');
+      border.style.borderColor = '#567EFF';
+    }
+
+    function color7() {
+      const btnColor7 = document.querySelector('.color7');
+      border.style.borderColor = '#C56CF0';
+    }
+
+    function color8() {
+      const btnColor8 = document.querySelector('.color8');
+      border.style.borderColor = '#57606F';
+    }
+    // end change border color
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
